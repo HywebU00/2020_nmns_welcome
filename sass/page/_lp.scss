@@ -1,0 +1,170 @@
+.lp {
+    table {
+        td {
+            a {
+                @include aSetting_nocolor;
+                color: $secondaryColor;
+            }
+            &.date {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+            &.num {
+                text-align: center;
+                color: #333;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .list {
+        &>ul, ol {
+            list-style-type: none;
+            padding: 0;
+            border-top: 5px solid $secondaryColor;
+            &>li {
+                padding: 1em 0;
+                border-bottom: 1px solid #ccc;
+                position: relative;
+                &:hover {
+                    background-color: #fff6d2;
+                }
+                &:nth-child(even) {
+                    background-color: #eee;
+                    &:hover {
+                        background-color: #fff6d2;
+                    }
+                }
+                .tag {
+                    margin-left: 2em;
+                }
+                &>a {
+                    display: block;
+                    padding-left: 2em;
+                    position: relative;
+                    line-height: 1.45em;
+                    color: $color-word;
+                    margin-right: 220px;
+                    @include screen('mobile') {
+                        margin: 0;
+                        display: blcok;
+                        margin-bottom: 5px;
+                    }
+                    &:hover {
+                        color: $aHover;
+                    }
+                    .num {
+                        width: 1.5em;
+                        text-align: right;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 1.5em;
+                        border-radius: 50%;
+                        background-color: $secondaryColor;
+                        color: #fff;
+                        text-align: center;
+                        // &:after {
+                        //     content: ".";
+                        //     display: inline-block;
+                        // }
+                    }
+                }
+                span.dept {
+                    position: absolute;
+                    right: 100px;
+                    top: .9em;
+                    color: #666;
+                    padding: 5px 10px;
+                    background-color: #dbdbdb;
+                    color: #333;
+                    border-radius: 50px;
+                    font-size: 0.938em;
+                    @include screen("mobile") {
+                        display: block;
+                        position: relative;
+                        right: auto;
+                        top: auto;
+                        left: 2em;
+                        margin-right: 5px;
+                        padding: 2px 10px;
+                        display: inline-block;
+                    }
+                }
+                time {
+                    position: absolute;
+                    right: 0;
+                    top: 1em;
+                    width: 100px;
+                    text-align: right;
+                    color: #666;
+                    font-size: .938em;
+                    @include screen('mobile') {
+                        position: relative;
+                        top: 0;
+                        right: 0;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+// 常見問題
+.qa_table {
+    td {
+        border-bottom: 2px solid #ccc;
+        a {
+            color: $color-red !important;
+            text-decoration: underline !important;
+            &:hover {
+                text-decoration: none !important;
+            }
+        }
+        p {
+            color: #333;
+            line-height: 1.7em;
+            margin: 0 0 10px;
+            padding: 0;
+        }
+        .question {
+            position: relative;
+            padding-left: 50px;
+            padding-bottom: 10px;
+            padding-top: 2px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #ccc;
+            &:before {
+                content: 'Q:';
+                font-family: Helvetica;
+                font-size: 1.75em;
+                position: absolute;
+                left: 0;
+                top: 0px;
+                color: $secondaryColor;
+                font-weight: 700;
+            }
+        }
+        .answer {
+            position: relative;
+            padding-left: 50px;
+            padding-top: 2px;
+            &:before {
+                content: 'A:';
+                font-family: Helvetica;
+                font-size: 1.75em;
+                position: absolute;
+                left: 0;
+                top: 0px;
+                color: $color-orange;
+                font-weight: 700;
+            }
+        }
+    }
+}
+// 
+
